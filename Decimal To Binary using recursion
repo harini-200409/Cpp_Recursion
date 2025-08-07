@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void DecimalToBinary(int n)
+{
+    if(n==0)
+    return;
+    
+    DecimalToBinary(n/2);
+    cout<<n%2;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    if(n==0)
+    cout<<"0";
+    else
+    DecimalToBinary(n);
+    return 0;
+}
